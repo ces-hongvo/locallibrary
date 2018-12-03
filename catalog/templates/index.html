@@ -1,0 +1,50 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Local Library Home</h1>
+  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+  </ul>
+  {% load static %}
+  <div class="wrapper">
+    <img data-src="{% static 'compressed_images/flower1.jpg' %}" class="lazyload"
+      srcset="{% static 'compressed_images/flower1.jpg-small.jpg' %} 480w, {% static 'compressed_images/flower1.jpg' %} 1080w" sizes="50vw" />
+    <div class="price">Violet bouquet- $9</div>
+  </div>
+  <div class="wrapper">
+    <img data-src="{% static 'compressed_images/flower2.jpg' %}" class="lazyload"
+    srcset="{% static 'compressed_images/flower2.jpg-small.jpg' %} 480w, {% static 'compressed_images/flower2.jpg' %} 1080w" sizes="50vw" />
+    <div class="price">Cream bouquet - $5</div>
+  </div>
+  <div class="wrapper">
+    <img data-src="{% static 'compressed_images/flower3.jpg' %}" class="lazyload"
+    srcset="{% static 'compressed_images/flower3.jpg-small.jpg' %} 480w, {% static 'compressed_images/flower3.jpg' %} 1080w" sizes="50vw" />
+    <div class="price">Light pink bouquet - $6</div>
+  </div>
+  <div class="wrapper">
+    <img data-src="{% static 'compressed_images/flower4.jpg' %}" class="lazyload"
+    srcset="{% static 'compressed_images/flower4.jpg-small.jpg' %} 480w, {% static 'compressed_images/flower4.jpg' %} 1080w" sizes="50vw" />
+    <div class="price">Yellow bouquet - $8</div>
+  </div>
+  <div class="wrapper">
+    <img data-src="{% static 'compressed_images/flower5.jpg' %}" class="lazyload"
+    srcset="{% static 'compressed_images/flower5.jpg-small.jpg' %} 480w, {% static 'compressed_images/flower5.jpg' %} 1080w" sizes="50vw" />
+    <div class="price">Polka dot bouquet - $11</div>
+  </div>
+  <div class="wrapper">
+    <img data-src="{% static 'compressed_images/flower6.jpg' %}" class="lazyload"
+    srcset="{% static 'compressed_images/flower6.jpg-small.jpg' %} 480w, {% static 'compressed_images/flower6.jpg' %} 1080w" sizes="50vw" />
+    <div class="price">Burgandy bouquet - $7</div>
+  </div>
+  <div class="wrapper">
+    <video autoplay loop muted playsinline>
+      <source src="{% static '/gifs/giphy.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+{% endblock %}
